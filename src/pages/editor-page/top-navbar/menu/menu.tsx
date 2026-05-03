@@ -14,6 +14,7 @@ import {
 } from '@/components/menubar/menubar';
 import { useChartDB } from '@/hooks/use-chartdb';
 import { useDialog } from '@/hooks/use-dialog';
+import { useExportDiagramToFolder } from '@/hooks/use-export-diagram-to-folder';
 import { useExportImage } from '@/hooks/use-export-image';
 import { databaseTypeToLabelMap } from '@/lib/databases';
 import { DatabaseType } from '@/lib/domain/database-type';
@@ -37,6 +38,7 @@ export const Menu: React.FC<MenuProps> = () => {
         deleteDiagram,
         updateDiagramUpdatedAt,
         databaseType,
+        currentDiagram,
     } = useChartDB();
     const {
         openCreateDiagramDialog,
@@ -66,6 +68,11 @@ export const Menu: React.FC<MenuProps> = () => {
     const { redo, undo, hasRedo, hasUndo } = useHistory();
     const { exportImage } = useExportImage();
     const navigate = useNavigate();
+    const {
+        isSupported: isFolderExportSupported,
+        exportToFolder,
+        pickFolder,
+    } = useExportDiagramToFolder();
 
     const handleDeleteDiagramAction = useCallback(() => {
         deleteDiagram();
@@ -305,6 +312,23 @@ export const Menu: React.FC<MenuProps> = () => {
                             <MenubarItem onClick={openExportDiagramDialog}>
                                 JSON
                             </MenubarItem>
+                            {isFolderExportSupported ? (
+                                <>
+                                    <MenubarSeparator />
+                                    <MenubarItem
+                                        onClick={() =>
+                                            exportToFolder({
+                                                diagram: currentDiagram,
+                                            })
+                                        }
+                                    >
+                                        {t('menu.file.save_to_folder')}
+                                    </MenubarItem>
+                                    <MenubarItem onClick={pickFolder}>
+                                        {t('menu.file.choose_export_folder')}
+                                    </MenubarItem>
+                                </>
+                            ) : null}
                         </MenubarSubContent>
                     </MenubarSub>
                     <MenubarSeparator />

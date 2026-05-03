@@ -45,6 +45,10 @@ export const ko_KR: LanguageTranslation = {
                 show_minimap: 'Show Mini Map',
                 hide_minimap: 'Hide Mini Map',
             },
+            file: {
+                save_to_folder: 'Save to folder',
+                choose_export_folder: 'Choose export folder…',
+            },
             backup: {
                 backup: '백업',
                 export_diagram: '다이어그램 내보내기',

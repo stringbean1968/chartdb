@@ -44,6 +44,10 @@ export const fr: LanguageTranslation = {
                 show_minimap: 'Afficher la Mini Carte',
                 hide_minimap: 'Masquer la Mini Carte',
             },
+            file: {
+                save_to_folder: 'Save to folder',
+                choose_export_folder: 'Choose export folder…',
+            },
             backup: {
                 backup: 'Sauvegarde',
                 export_diagram: 'Exporter le diagramme',

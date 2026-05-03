@@ -45,6 +45,10 @@ export const zh_CN: LanguageTranslation = {
                 show_minimap: 'Show Mini Map',
                 hide_minimap: 'Hide Mini Map',
             },
+            file: {
+                save_to_folder: 'Save to folder',
+                choose_export_folder: 'Choose export folder…',
+            },
             backup: {
                 backup: '备份',
                 export_diagram: '导出关系图',
