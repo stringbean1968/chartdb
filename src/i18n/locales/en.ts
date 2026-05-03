@@ -44,6 +44,10 @@ export const en = {
                 show_minimap: 'Show Mini Map',
                 hide_minimap: 'Hide Mini Map',
             },
+            file: {
+                save_to_folder: 'Save to folder',
+                choose_export_folder: 'Choose export folder…',
+            },
             backup: {
                 backup: 'Backup',
                 export_diagram: 'Export Diagram',

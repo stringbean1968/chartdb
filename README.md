@@ -138,6 +138,18 @@ VITE_OPENAI_API_ENDPOINT=http://localhost:8000/v1
 VITE_LLM_MODEL_NAME=Qwen/Qwen2.5-32B-Instruct-AWQ
 ```
 
+### Saving diagrams to a local folder (Git-friendly)
+
+ChartDB supports writing diagram JSON files directly to a folder on your machine using the browser's
+[File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API).
+This works in Chromium-based browsers (Chrome, Edge, Brave, Arc) — Firefox and Safari are not supported yet.
+
+1. Click **Actions → Export as → Choose export folder…** and pick any local directory (e.g. a Git repository).
+2. From then on, **Actions → Export as → Save to folder** silently writes `<DiagramName>.json` to that directory — no download prompts.
+3. Point it at a Git repo and run `git commit` whenever you want a snapshot. The JSON diffs are small and readable.
+
+The chosen folder is remembered across page reloads via IndexedDB, so you only need to pick it once.
+
 ## Try it on our website
 
 1. Go to [ChartDB.io](https://chartdb.io?ref=github_readme_2)

@@ -46,6 +46,10 @@ export const pt_BR: LanguageTranslation = {
                 hide_minimap: 'Hide Mini Map',
             },
             // TODO: Translate
+            file: {
+                save_to_folder: 'Save to folder',
+                choose_export_folder: 'Choose export folder…',
+            },
             backup: {
                 backup: 'Backup',
                 export_diagram: 'Exportar Diagrama',

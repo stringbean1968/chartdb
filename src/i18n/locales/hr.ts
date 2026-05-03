@@ -44,6 +44,10 @@ export const hr: LanguageTranslation = {
                 show_minimap: 'Prikaži mini kartu',
                 hide_minimap: 'Sakrij mini kartu',
             },
+            file: {
+                save_to_folder: 'Save to folder',
+                choose_export_folder: 'Choose export folder…',
+            },
             backup: {
                 backup: 'Sigurnosna kopija',
                 export_diagram: 'Izvezi dijagram',

@@ -44,6 +44,10 @@ export const ru: LanguageTranslation = {
                 show_minimap: 'Показать мини-карту',
                 hide_minimap: 'Скрыть мини-карту',
             },
+            file: {
+                save_to_folder: 'Save to folder',
+                choose_export_folder: 'Choose export folder…',
+            },
             backup: {
                 backup: 'Бэкап',
                 export_diagram: 'Экспорт диаграммы',

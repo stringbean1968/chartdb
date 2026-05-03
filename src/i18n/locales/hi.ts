@@ -45,6 +45,10 @@ export const hi: LanguageTranslation = {
                 show_minimap: 'Show Mini Map',
                 hide_minimap: 'Hide Mini Map',
             },
+            file: {
+                save_to_folder: 'Save to folder',
+                choose_export_folder: 'Choose export folder…',
+            },
             backup: {
                 backup: 'बैकअप',
                 export_diagram: 'आरेख निर्यात करें',

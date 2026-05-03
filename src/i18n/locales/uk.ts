@@ -44,6 +44,10 @@ export const uk: LanguageTranslation = {
                 show_minimap: 'Показати мінімапу',
                 hide_minimap: 'Приховати мінімапу',
             },
+            file: {
+                save_to_folder: 'Save to folder',
+                choose_export_folder: 'Choose export folder…',
+            },
             backup: {
                 backup: 'Резервне копіювання',
                 export_diagram: 'Експорт діаграми',
